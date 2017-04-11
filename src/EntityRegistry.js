@@ -23,8 +23,9 @@ EntityRegistry.prototype.update = function(dx){
 }
 
 EntityRegistry.prototype.render = function(ctx){
+  ctx.clearRect(0,0,window.innerWidth, window.innerHeight);
   var ctr = 0;
-  for (var i = 0; i < 10 && ctr < this.entities.length; i++){
+  for (var i = 0; i <= 10 && ctr < this.entities.length; i++){
     this.entities.forEach(function(entity){
       if (entity.layer == i){
         entity.render(ctx);

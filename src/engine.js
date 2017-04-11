@@ -23,7 +23,6 @@ function gameLoop(){
   else if (gameState === "running"){
     entityRegistry.update(dx);
     entityRegistry.render(ctx);
-    console.log("hi");
   }
 
   loopStart = new Date().getTime();
